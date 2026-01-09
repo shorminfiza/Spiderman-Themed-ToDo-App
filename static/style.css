@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #c31432, #240b36);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main Card */
+.container {
+    width: 520px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    color: white;
+}
+
+/* Title */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+/* Form */
+form input,
+form select,
+form button {
+    width: 100%;
+    padding: 10px;
+    margin: 6px 0;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+form input,
+form select {
+    background: rgba(255,255,255,0.9);
+}
+
+form button {
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(255,75,43,0.6);
+}
+
+/* Filters */
+.filters {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.filters a {
+    color: #ffd369;
+    text-decoration: none;
+    margin: 0 8px;
+    font-weight: bold;
+}
+
+.filters a:hover {
+    text-decoration: underline;
+}
+
+/* Task Card */
+.task {
+    background: rgba(255,255,255,0.15);
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s;
+}
+
+.task:hover {
+    transform: scale(1.02);
+}
+
+/* Task text */
+.task span {
+    font-size: 15px;
+}
+
+.done {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+/* Priority Badges */
+.High {
+    color: #ff4b5c;
+    font-weight: bold;
+}
+
+.Medium {
+    color: #ffd369;
+    font-weight: bold;
+}
+
+.Low {
+    color: #4cd137;
+    font-weight: bold;
+}
+
+/* Action buttons */
+.task a {
+    text-decoration: none;
+    margin-left: 8px;
+    font-size: 18px;
+}
+
+.task a:hover {
+    transform: scale(1.2);
+}

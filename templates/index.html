@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Todo App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+<h1>🕷️ Spider-Todo</h1>
+<p style="text-align:center; opacity:0.8;">
+    With great power comes great productivity
+</p>
+
+
+
+<form action="/add" method="post">
+    <input type="text" name="task" placeholder="Task" required>
+
+    <select name="priority">
+        <option>High</option>
+        <option selected>Medium</option>
+        <option>Low</option>
+    </select>
+
+    <input type="date" name="due_date">
+
+    <button type="submit">Add Task</button>
+</form>
+
+<div class="filters">
+    <a href="/">All</a>
+    <a href="/?filter=pending">Pending</a>
+    <a href="/?filter=completed">Completed</a>
+</div>
+
+{% for task in tasks %}
+<div class="task">
+    <div>
+        <span class="{{ 'done' if task.status }}">
+            {{ task.task }}
+        </span>
+        <small class="{{ task.priority }}">
+            ({{ task.priority }}) - {{ task.due_date }}
+        </small>
+    </div>
+
+    <div>
+        {% if not task.status %}
+            <a href="/complete/{{ task.id }}">✔</a>
+        {% endif %}
+        <a href="/delete/{{ task.id }}">🗑</a>
+    </div>
+</div>
+{% endfor %}
+</div>
+
+</body>
+</html>

@@ -4,6 +4,6 @@ def get_connection():
     return mysql.connector.connect(
         host="localhost",
         user="root",
-        password="AsUsZeNSHOR2026#",
+        password="YOUR_PASSWORD",
         database="todo_app"
     )

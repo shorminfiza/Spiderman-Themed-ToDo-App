@@ -57,7 +57,7 @@
     <h2>Demo</h2>
     <div class="video-container">
         <!-- Replace the src with your demo video URL -->
-        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
+        <iframe src="https://youtu.be/qI3THKc6b_c" allowfullscreen></iframe>
     </div>
 
     <h2>Setup</h2>
